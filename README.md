@@ -15,3 +15,7 @@ docker build -t name_cont . -запускает сборку образа док
 docker images - просмотр образов
 
 docker run image - запуск образа
+
+docker run -d cont_name - запуск образа как демон
+
+docker stop cont_name - остановка образа
