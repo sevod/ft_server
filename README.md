@@ -19,3 +19,5 @@ docker run image - запуск образа
 docker run -d cont_name - запуск образа как демон
 
 docker stop cont_name - остановка образа
+
+docker exec -i -t 6ee6223a3ce3 bash - поключение к докер контейнеру
