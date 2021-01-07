@@ -1,5 +1,7 @@
 https://habr.com/ru/company/flant/blog/336654/ - шпаргалка
 
+uname -a версия линукс
+
 https://www.youtube.com/watch?v=oeRigQcA6GA
 
 docker ps - показывает список запущеных контейнеров
@@ -18,9 +20,13 @@ docker run image - запуск образа
 
 docker run -d image_name - запуск образа как демон
 
+docker  run --name cont_name -itd -p 80:80 image_name - запуск образа как демон с проброшенным портом 80 и нормальным именем
+
 docker rename infinite infinity - переимеование контейнера
 
-docker stop cont_name - остановка образа
+docker stop cont_name - остановка контейнера
+
+docker start cont_name - запуск остановленного контейнера
 
 docker restart cont_name - перезагрузка контейнера
 
@@ -33,6 +39,8 @@ docker exec -i -t 6ee6223a3ce3 bash - поключение к докер кон�
 docker exec -it mycontainer /bin/sh - Подключиться к командной оболочке работающего контейнера
 
 docker run -it myapp /bin/sh - Запустить оболочку в качестве команды контейнера
+
+
 
 https://devacademy.ru/article/kak-udalit-obrazy-kontieiniery-i-toma-docker
 
