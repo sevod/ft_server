@@ -1,3 +1,5 @@
+https://habr.com/ru/company/flant/blog/336654/ - шпаргалка
+
 https://www.youtube.com/watch?v=oeRigQcA6GA
 
 docker ps - показывает список запущеных контейнеров
@@ -14,9 +16,17 @@ docker build -t name_cont . -запускает сборку образа док
 
 docker run image - запуск образа
 
-docker run -d cont_name - запуск образа как демон
+docker run -d image_name - запуск образа как демон
+
+docker rename infinite infinity - переимеование контейнера
 
 docker stop cont_name - остановка образа
+
+docker restart cont_name - перезагрузка контейнера
+
+docker pause cont_name - пауза контейнера
+
+docker unpause cont_name - снять с паузы контейнер
 
 docker exec -i -t 6ee6223a3ce3 bash - поключение к докер контейнеру
 
