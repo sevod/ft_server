@@ -5,6 +5,9 @@ RUN apt-get install -y nginx
 RUN apt-get install -y php-fpm
 RUN apt-get install -y php-mysql
 RUN apt-get install -y default-mysql-server
+#RUN apt-get install -y wget
+RUN apt-get install -y zip
+ADD https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.zip /
 
 RUN apt-get install -y vim
 RUN apt-get install -y procps
