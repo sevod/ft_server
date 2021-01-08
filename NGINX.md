@@ -15,3 +15,9 @@ nginx -t  для проверки конфигурации Nginx на налич
     quit — плавное завершение
     reload — перезагрузка конфигурационного файла
     reopen — переоткрытие лог-файлов
+
+
+Пример докер файла nginx
+https://github.com/nginxinc/docker-nginx/blob/04d0c5754673d6880b91e94c3cebaa767d9a1af7/Dockerfile
+
+vim /var/log/nginx/error.log

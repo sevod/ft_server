@@ -34,7 +34,7 @@ docker pause cont_name - пауза контейнера
 
 docker unpause cont_name - снять с паузы контейнер
 
-docker exec -i -t 6ee6223a3ce3 bash - поключение к докер контейнеру
+docker exec -it 6ee6223a3ce3 bash - поключение к докер контейнеру
 
 docker exec -it mycontainer /bin/sh - Подключиться к командной оболочке работающего контейнера
 
@@ -47,6 +47,9 @@ https://devacademy.ru/article/kak-udalit-obrazy-kontieiniery-i-toma-docker
 sudo docker rmi $(sudo docker images -a -q) - удаление всех образов
 
 docker rm $(docker ps -a -f status=exited -q) - удаление всех закрытых контейнеров
+
+старт нескольких контейнеров
+https://docs.docker.com/config/containers/multi-service_container/
 
 
 

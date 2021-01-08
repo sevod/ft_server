@@ -1,19 +1,25 @@
 FROM debian:buster
 
-#разобраться с версией линукс
-#FROM nginx
-
-
-
-#EXPOSE 9000 80 443
-
 RUN apt-get update
+RUN apt-get install -y nginx
+RUN apt-get install -y php-fpm
+RUN apt-get install -y php-mysql
 RUN apt-get install -y vim
 RUN apt-get install -y procps
-RUN apt-get install -y nginx
-#пеерпроверить, машина убунту
-RUN update-rc.d nginx enable
 
+COPY ./srcs/index.html /var/www/html/
+COPY ./srcs/index.php /var/www/html/
+COPY ./srcs/default /etc/nginx/sites-enabled/default
+COPY ./srcs/start_script.sh start_script.sh
 
+EXPOSE 80 443
 
-COPY ./srcs/index.html /usr/share/nginx/html
+#nginx start
+#CMD ["bash", "start_script.sh"]
+CMD bash start_script.sh && tail -f /dev/null
+#CMD bash /start_script.sh /bin/sh -c 'bash /s…
+#ENTRYPOINT ["nginx", "-g", "daemon off;"]
+#не работают
+#ENTRYPOINT ["/etc/init.d/php7.3-fpm", "start"]
+#ENTRYPOINT /etc/init.d/php7.3-fpm start;
+#ENTRYPOINT nginx /bin/sh -c nginx
