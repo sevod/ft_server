@@ -4,6 +4,7 @@ RUN apt-get update
 RUN apt-get install -y nginx
 RUN apt-get install -y php-fpm
 RUN apt-get install -y php-mysql
+RUN apt-get install -y php-mbstring
 RUN apt-get install -y default-mysql-server
 #RUN apt-get install -y wget
 RUN apt-get install -y zip
@@ -13,10 +14,10 @@ ADD https://wordpress.org/wordpress-5.6.zip /
 RUN apt-get install -y vim
 RUN apt-get install -y procps
 
-COPY ./srcs/index.html /var/www/html/
 COPY ./srcs/index.php /var/www/html/
 COPY ./srcs/default /etc/nginx/sites-enabled/default
 COPY ./srcs/start_script.sh start_script.sh
+COPY ./srcs/wordpress.sql wordpress.sql
 
 EXPOSE 80 443
 
