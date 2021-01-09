@@ -22,3 +22,5 @@ cp -R /wordpress/* /var/www/html/wordpress
 rm -Rf /wordpress-5.6.zip
 rm -Rf /wordpress
 
+#mv /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
+

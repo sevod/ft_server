@@ -23,6 +23,8 @@ EXPOSE 80 443
 #nginx start
 #CMD ["bash", "start_script.sh"]
 CMD bash start_script.sh && tail -f /dev/null
+
+COPY ./srcs/wp-config.php /var/www/html/wordpress/wp-config.php
 #CMD bash /start_script.sh /bin/sh -c 'bash /s…
 #ENTRYPOINT ["nginx", "-g", "daemon off;"]
 #не работают
