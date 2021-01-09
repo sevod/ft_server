@@ -5,8 +5,8 @@ service php7.3-fpm start
 service mysql start
 
 #wordpress-SQL
-echo "CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" | mysql -u root --skip-password
-echo "source /wordpress.sql;" | mysql -u root --skip-password wordpress
+#echo "CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" | mysql -u root --skip-password
+echo "source /localhost.sql;" | mysql -u root --skip-password
 echo "GRANT ALL ON wordpress.* TO 'root'@'localhost' IDENTIFIED BY '123456';" | mysql -u root --skip-password
 
 
@@ -20,7 +20,8 @@ rm -Rf /wordpress
 #phpMyAdmin
 unzip phpMyAdmin-5.0.4-all-languages.zip
 mkdir /var/www/html/wordpress/phpmyadmin
-mkdir /var/www/html/wordpress/phpmyadmin/tmp/
+mkdir /var/www/html/wordpress/phpmyadmin/tmp
+chmod 777 /var/www/html/wordpress/phpmyadmin/tmp
 cp -R phpMyAdmin-5.0.4-all-languages/* /var/www/html/wordpress/phpmyadmin
 rm -Rf phpMyAdmin-5.0.4-all-languages
 rm -Rf phpMyAdmin-5.0.4-all-languages.zip
