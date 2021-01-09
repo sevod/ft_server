@@ -8,10 +8,10 @@ RUN apt-get install -y default-mysql-server
 #RUN apt-get install -y wget
 RUN apt-get install -y zip
 ADD https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.zip /
+ADD https://wordpress.org/wordpress-5.6.zip /
 
 RUN apt-get install -y vim
 RUN apt-get install -y procps
-
 
 COPY ./srcs/index.html /var/www/html/
 COPY ./srcs/index.php /var/www/html/
