@@ -28,7 +28,7 @@ docker run image - запуск образа
 
 docker run -d image_name - запуск образа как демон
 
-docker  run --name cont_name -itd -p 80:80 image_name - запуск образа как демон с проброшенным портом 80 и нормальным именем
+docker  run --name cont_name -itd -p 80:80 -p 443:443 image_name - запуск образа как демон с проброшенным портом 80 и нормальным именем
 
 docker rename infinite infinity - переимеование контейнера
 
