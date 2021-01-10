@@ -19,14 +19,7 @@ COPY ./srcs/localhost.sql localhost.sql
 
 EXPOSE 80 443
 
-#nginx start
-#CMD ["bash", "start_script.sh"]
 CMD bash start_script.sh && tail -f /dev/null
 
 COPY ./srcs/wp-config.php /var/www/html/wordpress/wp-config.php
-#CMD bash /start_script.sh /bin/sh -c 'bash /s…
-#ENTRYPOINT ["nginx", "-g", "daemon off;"]
-#не работают
-#ENTRYPOINT ["/etc/init.d/php7.3-fpm", "start"]
-#ENTRYPOINT /etc/init.d/php7.3-fpm start;
-#ENTRYPOINT nginx /bin/sh -c nginx
+COPY ./srcs/config.inc.php /var/www/html/wordpress/phpmyadmin/config.inc.php
