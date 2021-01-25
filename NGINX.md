@@ -1,3 +1,4 @@
+https://localhost/wp-admin/css/
 
 ps -e список процесов (RUN apt-get install -y procps)
 

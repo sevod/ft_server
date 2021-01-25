@@ -30,3 +30,5 @@ mv /etc/nginx/ssl/ssl-params.conf /etc/nginx/snippets/
 
 service nginx start
 
+bash
+

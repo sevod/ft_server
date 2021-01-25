@@ -1,10 +1,23 @@
+df -h посмотреть диски
+
+mkdir disk создаем папку
+
+ln -s /dev/disk2s4/ ~/disk создаем хардлинк
+	removed docker
+	mkdir -p ~/goinfre/docker
+	rm -rf ~/Library/Containers/com.docker.docker
+	ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
+	install docker
+
+1. docker build -t image_name .
+2. docker  run --name cont_name -itd -p 80:80 -p 443:443 image_name - запуск образа как демон с проброшенным портом 80 и нормальным именем
+
 
 sudo docker rmi $(sudo docker images -a -q) - удаление всех образов
 
 docker rm $(docker ps -a -q) - удаление всех контейнеров
 
 docker exec -it cont_name bash - поключение к докер контейнеру
-
 
 https://habr.com/ru/company/flant/blog/336654/ - шпаргалка
 

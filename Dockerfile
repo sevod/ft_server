@@ -21,7 +21,7 @@ COPY ./srcs/ssl /etc/nginx/ssl
 
 EXPOSE 80 443
 
-CMD bash start_script.sh && tail -f /dev/null
+CMD bash start_script.sh
 
 COPY ./srcs/wp-config.php /var/www/html/wordpress/wp-config.php
 COPY ./srcs/config.inc.php /var/www/html/wordpress/phpmyadmin/config.inc.php
